@@ -18,6 +18,13 @@ import {faArrowRightLong} from '@fortawesome/free-solid-svg-icons';
   styleUrl: './hero.component.css'
 })
 export class HeroComponent implements OnInit {
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+  }
+
   heroItems = [
     {
       image: './assets/img/hero/hero-1.jpg',
@@ -35,8 +42,8 @@ export class HeroComponent implements OnInit {
 
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: true,
-    touchDrag: true,
+    mouseDrag: false,
+    touchDrag: false,
     pullDrag: false,
     dots: false,
     navSpeed: 700,
@@ -46,13 +53,13 @@ export class HeroComponent implements OnInit {
         items: 1
       }
     },
-    nav: true
+    nav: true,
+    autoplay: true,
+    autoplayTimeout: 6000,
+    autoplayHoverPause: true,
+    smartSpeed: 7000,  // Add this line
+    animateIn: 'fadeIn',  // Optional: for fade in effect
+    animateOut: 'fadeOut'  // Optional: for fade out effect
   }
   faArrowRight = faArrowRightLong;
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
 }

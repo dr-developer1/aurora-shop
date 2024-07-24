@@ -51,7 +51,7 @@
       position: relative;
       top: 100px;
       opacity: 0;
-      @include transition(all, .3s);
+      @include transition(all, .6s);
     }
 
     h2 {
